@@ -135,25 +135,35 @@ It also displays formatted full logs rather than raw JSON/XML.
 
 ## Running the Project
 
-### 1. Backend Configuration
+### Backend configuration
 
-Set the following environment variables before running the backend:
+The backend requires two environment variables:
 
-    MONGO_CONNECTION_URL=your_mongodb_connection_string
-    SEC_USER_AGENT=your_email_or_app_identifier
+    MONGO_CONNECTION_URL = your_mongodb_connection_string
+    SEC_USER_AGENT = your_email_or_app_identifier
 
-A sample template is included in:
+A template is provided in:
 
     backend/edgarpulse-backend/.env.example
 
-### 2. Backend Endpoints
+I already set my env variables in Github Codespace secrets.
+
+### Backend service
+
+From the backend directory:
+
+    cd backend/edgarpulse-backend
+
+Build the project with Maven Wrapper:
+
+    ./mvnw package
 
 The backend exposes two main endpoints:
 
 - `/analyze` — returns structured SEC filing analytics for a given CIK
 - `/dashboard` — displays operational analytics and formatted logs
 
-### 3. Android Client
+### Android client
 
 The Android app sends requests to the backend endpoint and displays:
 - company name
@@ -164,8 +174,13 @@ The Android app sends requests to the backend endpoint and displays:
 - disclosure activity level
 - summary
 
-Note:
-The Android client should be configured with the correct public backend URL for the currently deployed backend environment.
+Before running the Android client, update the backend base URL so it points to the currently deployed public backend endpoint.
+
+### Notes
+
+- GitHub Codespaces secrets are available as environment variables in the terminal session.
+- If you add or update a secret after a codespace is already running, stop and restart the codespace before using it.
+- Secrets are intended for runtime use and are not available during Dockerfile build time.
 
 ---
 
