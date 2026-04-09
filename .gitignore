@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Environment / secrets
+.env
+.env.local
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Logs
+*.log
+
+# Backend (Maven / Java)
+backend/edgarpulse-backend/target/
+backend/edgarpulse-backend/*.war
+backend/edgarpulse-backend/*.jar
+
+# Android / Gradle
+android-client/edgarpulse-android/.gradle/
+android-client/edgarpulse-android/build/
+android-client/edgarpulse-android/app/build/
+android-client/edgarpulse-android/local.properties
+android-client/edgarpulse-android/captures/
+android-client/edgarpulse-android/.idea/
+
+# Gradle / Android generated files
+android-client/edgarpulse-android/**/build/
+
+# Keystore / signing
+*.jks
+*.keystore
+
+# Optional: test outputs / temp files
+*.tmp
+*.swp
