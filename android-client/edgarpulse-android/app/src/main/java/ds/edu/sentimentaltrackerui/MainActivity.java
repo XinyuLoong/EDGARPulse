@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Public backend endpoint for demo deployment
     private static final String BACKEND_BASE_URL =
-            "https://turbo-acorn-pjqvpw9p59vgh99jg-8080.app.github.dev/analyze?cik=";
+            "https://glowing-trout-4j94wv6wp6qph5rqw-8080.app.github.dev/analyze?cik=";
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     // Ctreate UI and set up event listener for the analyze button
