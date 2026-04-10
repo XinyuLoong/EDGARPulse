@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SentimentalTrackerUI"
+rootProject.name = "edgarpulse-android"
 include(":app")
  
