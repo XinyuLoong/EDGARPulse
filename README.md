@@ -82,6 +82,8 @@ Workflow:
   - backend API screenshots
   - dashboard screenshots
   - MongoDB screenshots
+  - System screenshots
+
 
 ---
 
@@ -92,8 +94,8 @@ Workflow:
 - **Database:** MongoDB Atlas
 - **External Data Source:** SEC EDGAR API
 - **Data Format:** JSON
-- **Development / Demo Environment:** GitHub Codespaces
-- **Planned Portfolio Deployment Upgrade:** AWS
+- **Development Environment:** GitHub Codespaces
+- **Future Deployment:** AWS
 
 ---
 
@@ -139,14 +141,14 @@ It also displays formatted full logs rather than raw JSON/XML.
 
 The backend requires two environment variables:
 
-    MONGO_CONNECTION_URL = your_mongodb_connection_string
-    SEC_USER_AGENT = your_email_or_app_identifier
+    MONGO_CONNECTION_URL=your_mongodb_connection_string (no quotation marks)
+    SEC_USER_AGENT=your_email_or_app_identifier (no quotation marks)
 
 A template is provided in:
 
     backend/edgarpulse-backend/.env.example
 
-I already set my env variables in Github Codespace secrets.
+Do not commit real secrets to the repository. Instead, set these values in the local environment or in the cloud development environment.
 
 ### Backend service
 
@@ -186,20 +188,23 @@ Before running the Android client, update the backend base URL so it points to t
 
 ## Example Use Case
 
-A user enters a SEC CIK in the Android app. The backend retrieves recent filing information from the SEC EDGAR API, selects a representative filing, computes risk tone and disclosure activity indicators, stores the request log in MongoDB Atlas, and returns a structured JSON response. The dashboard then aggregates these logs to provide operational analytics and monitoring visibility.
+A user enters an SEC CIK in the Android app. The backend retrieves recent filing information from the SEC EDGAR API, selects a representative filing, computes risk tone and disclosure activity indicators, stores the request log in MongoDB Atlas, and returns a structured JSON response. The dashboard then aggregates these logs to provide operational analytics and monitoring visibility.
 
 ---
 
 ## Screenshots
 
-Suggested screenshots to include in this repository:
+Included screenshots:
 
 - `screenshots/android/android-home.png`
 - `screenshots/android/android-result.png`
 - `screenshots/backend/api-response.png`
 - `screenshots/dashboard/dashboard-analytics.png`
-- `screenshots/dashboard/dashboard-logs.png`
+- `screenshots/dashboard/dashboard-log1.png`
+- `screenshots/dashboard/dashboard-log2.png`
 - `screenshots/mongodb/mongodb-logs.png`
+- `screenshots/mongodb/mongodb-logs.png`
+- `screenshots/system/system_architecture.png`
 
 ---
 
@@ -214,7 +219,7 @@ Suggested screenshots to include in this repository:
 
 ## Portfolio Context
 
-This repository is a portfolio-oriented version of the project. The original course implementation was refactored to emphasize:
+This repository presents a portfolio-oriented version of the project, with an emphasis on:
 - cleaner project structure,
 - safer configuration management,
 - clearer documentation,
@@ -234,7 +239,4 @@ This repository is a portfolio-oriented version of the project. The original cou
 
 ## Contact
 
-If you are reviewing this project as part of an application, I would be happy to provide:
-- a short case study PDF,
-- selected screenshots,
-- or a guided walkthrough of the system design and implementation.
+A short guide PDF is included in this repo.
